@@ -102,6 +102,6 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://github.com/helloclaire2025/helloclaire2025.github.io.git
+  repo: https://github.com/helloclaire2025/helloclaire2025.github.io
   branch: main
 
