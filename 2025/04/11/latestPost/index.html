@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="claire">
+
+
+
+
+
+<title>0元搭建个人播客 | helloclaire</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Claire&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Claire&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">0元搭建个人播客</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">claire</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">April 11, 2025&nbsp;&nbsp;16:13:32</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>个人网站的组成部分：<br>1、域名：通过一个域名访问网站（如果没有域名，只能通过ip地址访问）<br>2、网站代码：网页、文字、图片<br>3、服务器：代码运行、数据保存等</p>
+<p>个人网站的维护：<br>1、域名和服务器费用：国内域名需要备案才可以访问<br>2、更新文章：利用markdown写文章，直接更新到个人网站上<br>3、网络安全：？</p>
+<p>搭建个人网站的诉求：<br>1、个人学习和积累：尽量免费、少花钱<br>2、搭建简单、维护简单，避免很多工具花里胡哨</p>
+<p>资源部分：<br>1、单独购买云服务器、域名<br>2、利用一站式工具，打包进行网页开发、云服务器购买、域名购买等，比如WordPress工具<br>3、利用可以托管的免费平台，比如github</p>
+<p>网站代码：<br>1、完全自己开发<br>2、直接使用模版 、拖拽式开发 or 少量代码修改<br>3、AI工具生成 </p>
+<p>部署代码：<br>1、宝塔<br>2、hexo</p>
+<h1 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h1><h2 id="1、安装Hexo"><a href="#1、安装Hexo" class="headerlink" title="1、安装Hexo"></a>1、安装Hexo</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo官网</a></p>
+<blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 <a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。可以根据官网文档中的安装步骤进行。</p>
+</blockquote>
+<h2 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h2><p>1.1 安装Node.js<br>1.2 安装git</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+<li>使用npm命令直接下载安装，先替换成国内的源下载更快</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+<ul>
+<li>install hexo</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、新建博客项目"><a href="#2、新建博客项目" class="headerlink" title="2、新建博客项目"></a>2、新建博客项目</h2><ul>
+<li>选择一个文件夹，在该文件夹下打开终端，运行命令来新建博客</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init hello-claire</span><br></pre></td></tr></table></figure>
+<ul>
+<li>进入博客项目，安装依赖包</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd hello-claire</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>运行</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<ul>
+<li>访问<br><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></li>
+</ul>
+<p>到这里一个本地的初始博客已经诞生了，现在需要进行美化，以及发布到服务器上，让别人访问</p>
+<h2 id="3、将博客托管到GitHub-Pages"><a href="#3、将博客托管到GitHub-Pages" class="headerlink" title="3、将博客托管到GitHub Pages"></a>3、将博客托管到GitHub Pages</h2><p>github除了帮我们管理代码，gitbug也可以帮我们部署播客，所以就可以省去租用云服务器的钱</p>
+<h3 id="1-将我们代码托管到github"><a href="#1-将我们代码托管到github" class="headerlink" title="1 将我们代码托管到github"></a>1 将我们代码托管到github</h3><ul>
+<li>现在github上创建一个项目<br>helloclaire2025.github.io</li>
+<li>将我们的播客项目暂存到github仓库<br><img src="/image/github.png" alt="github提交"></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;# helloclaire2025.github.io&quot; &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin https://github.com/helloclaire2025/helloclaire2025.github.io.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<p>为了不上传node_modules中文件，增加了.gitignore文件，配置不上传的文件名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat .gitignore</span><br><span class="line">node_modules/</span><br></pre></td></tr></table></figure>
+
+<p>push代码遇到报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Blogs\hello-claire&gt; git push</span><br><span class="line">fatal: unable to access &#x27;https://github.com/helloclaire2025/helloclaire2025.github.io.git/&#x27;: Failed to connect to github.com port 443 after 21088 ms: Could not connect to server</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>使用Clash vpn代理，但是push代码没有使用vpn，解决办法,端口号是Clash的端口</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Blogs\hello-claire&gt; git config --global http.proxy 127.0.0.1:7890</span><br><span class="line">PS D:\Blogs\hello-claire&gt; git config --global https.proxy 127.0.0.1:7890</span><br></pre></td></tr></table></figure>
+
+<p>代码已经可以在github上看到了。</p>
+<ul>
+<li>新增一篇文章</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-使用Github-Pages部署博客"><a href="#2-使用Github-Pages部署博客" class="headerlink" title="2 使用Github Pages部署博客"></a>2 使用Github Pages部署博客</h3><ul>
+<li>增加部署配置 到 _config.yml</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line"></span><br><span class="line">  type: git</span><br><span class="line"></span><br><span class="line">  repository: https://github.com/helloclaire2025/helloclaire2025.github.io.git</span><br><span class="line"></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装hexo部署插件</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>到这里已经完成了，部署试一下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>把配置中的repo换成ssh链接的，部署遇到报错，替换成https就没有报错了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Error: Spawn failed</span><br><span class="line">    at ChildProcess.&lt;anonymous&gt; (D:\Blogs\helloclaie2025\node_modules\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)</span><br><span class="line">    at ChildProcess.emit (node:events:518:28)</span><br><span class="line">    at cp.emit (D:\Blogs\helloclaie2025\node_modules\cross-spawn\lib\enoent.js:34:29)</span><br><span class="line">    at ChildProcess._handle.onexit (node:internal/child_process:293:12)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-打开浏览器查看博客"><a href="#3-打开浏览器查看博客" class="headerlink" title="3 打开浏览器查看博客"></a>3 打开浏览器查看博客</h3><p><a target="_blank" rel="noopener" href="https://helloclaire2025.github.io/">https://helloclaire2025.github.io</a></p>
+<h2 id="4、使用Cloudflare加速访问【可选】"><a href="#4、使用Cloudflare加速访问【可选】" class="headerlink" title="4、使用Cloudflare加速访问【可选】"></a>4、使用Cloudflare加速访问【可选】</h2><p>github的一个问题就是国内访问不稳定，所以使用免费的Cloudflare代理一层，加速博客访问速度</p>
+<ul>
+<li>打开Cloudflare并登录</li>
+<li>worker &amp; pages  &gt; pages, 选择链接git，选择博客的仓库授权</li>
+<li>开始设置-&gt;开始部署-&gt;完成</li>
+<li>在部署tab,可以看到Cloudflare给我们分配的子域名，访问即可</li>
+<li>使用自定义域名，点击自定义域名，填进去自己的域名，点击激活，激活成功就可以了</li>
+</ul>
+<h2 id="5、博客页面美化"><a href="#5、博客页面美化" class="headerlink" title="5、博客页面美化"></a>5、博客页面美化</h2><p>当前的博客只是一个最原始的页面，需要替换好看的主题，hexo有很多开源免费的主题，可以自行选择。</p>
+<ul>
+<li>选择一个主题，这里以<a target="_blank" rel="noopener" href="https://github.com/Siricee/hexo-theme-Chic">chic</a>为例</li>
+<li>查看README文件的安装办法<ul>
+<li>clone主题仓库</li>
+<li>修改配置文件_config.yml 的theme改为chic<br>重新部署就可以了~~~</li>
+</ul>
+</li>
+</ul>
+<h2 id="6、结合markdown编辑器，实现播客本地编辑"><a href="#6、结合markdown编辑器，实现播客本地编辑" class="headerlink" title="6、结合markdown编辑器，实现播客本地编辑"></a>6、结合markdown编辑器，实现播客本地编辑</h2><p>直接在source&#x2F;_post&#x2F;文件夹 下新增md文件<br>在文件开头增加属性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"></span><br><span class="line">title: 博客文章的标题</span><br><span class="line"></span><br><span class="line">date: 2025-04-10 20:55:32</span><br><span class="line"></span><br><span class="line">tags:</span><br><span class="line"></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>运行部署</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean; hexo g; hexo d</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>claire</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://example.com/2025/04/11/latestPost/">http://example.com/2025/04/11/latestPost/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2025/04/10/post/">post</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© claire | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
