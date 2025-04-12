@@ -299,6 +299,7 @@
 <p>运行部署</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean; hexo g; hexo d</span><br></pre></td></tr></table></figure>
 
+<h3 id="7、iconfont替换"><a href="#7、iconfont替换" class="headerlink" title="7、iconfont替换"></a>7、iconfont替换</h3><p>在chic主题中使用了很多国外的社交媒体的icon，如果需要换成国内的，需要自己替换。<br>替换方法：<br>从iconfont.cn网站重新新件项目，添加需要的icon，下载Unicode模式的代码，在项目配置中可以勾选上eto和svg格式。<br>下载之后替换iconfont文件夹下面全部文件<br>然后从iconfont.css中找到引用icon的类名，也就是_config.yml中用来配置links的关键字。是icon-后面的字母，保持大小写一致，比如icon-bilibili, 在配置中的links也要配置成bilibili: <a target="_blank" rel="noopener" href="https://xxxxxxx/">https://xxxxxxx</a><br>一般这样就可以了。如果有问题可以找cursor排查，我遇到的一个问题是引用的icon文件找不到，在浏览器中报资源404，cursor帮我排查后修改了引用的文件地址，font_face中修改了字体的路径</p>
 
         </div>
 
@@ -313,7 +314,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://example.com/2025/04/11/latestPost/">http://example.com/2025/04/11/latestPost/</a></span>
+                        <span><a href="http://example.com/2025/04/11/Blog/">http://example.com/2025/04/11/Blog/</a></span>
                     </p>
                 
                 
