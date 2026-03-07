@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: helloclaire
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: claire
 language: en
 timezone: ''
 
@@ -96,9 +96,14 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: Chic
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/helloclaire2025/helloclaire2025.github.io.git
+  branch: main
+
+skip_render:
+  - "phonetics/**/*"
