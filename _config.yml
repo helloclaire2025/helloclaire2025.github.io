@@ -3,17 +3,29 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
+<<<<<<< HEAD
 title: helloclaire
 subtitle: ''
 description: ''
 keywords:
 author: claire
+=======
+title: Hexo
+subtitle: ''
+description: ''
+keywords:
+author: John Doe
+>>>>>>> af79b774ca37a9d6ab70caa1efb6e309953ebfc1
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+<<<<<<< HEAD
 url: http://example.com
+=======
+url: https://helloclaire2025.github.io
+>>>>>>> af79b774ca37a9d6ab70caa1efb6e309953ebfc1
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -96,14 +108,24 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
+<<<<<<< HEAD
 theme: Chic
+=======
+theme: landscape
+>>>>>>> af79b774ca37a9d6ab70caa1efb6e309953ebfc1
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
+<<<<<<< HEAD
   repo: https://github.com/helloclaire2025/helloclaire2025.github.io.git
   branch: main
 
 skip_render:
   - "phonetics/**/*"
+=======
+  repository: https://github.com/helloclaire2025/helloclaire2025.github.io
+  branch: gh-pages
+
+>>>>>>> af79b774ca37a9d6ab70caa1efb6e309953ebfc1
